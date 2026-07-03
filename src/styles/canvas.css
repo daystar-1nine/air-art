@@ -1,0 +1,57 @@
+/* ── Main canvas area ───────────────────────────────── */
+main {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The webcam feed (mirrored, faded) */
+#webcam {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scaleX(-1);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+#referenceImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* The drawing canvas — sits on top of the webcam */
+#paintCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  cursor: none;
+  z-index: 2;
+}
+
+/* Fingertip cursor overlay */
+#cursorDot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: background 0.1s;
+  display: none;
+  mix-blend-mode: screen;
+  z-index: 10;
+}
