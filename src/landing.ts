@@ -23,6 +23,27 @@ const initLanding = () => {
       transparent: true,
     });
   }
+
+  // Coffee Modal Logic
+  const coffeeBtn = document.getElementById('coffeeBtn');
+  const coffeeModal = document.getElementById('coffeeModal');
+  const closeCoffeeBtn = document.getElementById('closeCoffeeBtn');
+
+  if (coffeeBtn && coffeeModal && closeCoffeeBtn) {
+    coffeeBtn.addEventListener('click', () => {
+      coffeeModal.classList.remove('hidden');
+    });
+
+    closeCoffeeBtn.addEventListener('click', () => {
+      coffeeModal.classList.add('hidden');
+    });
+
+    coffeeModal.addEventListener('click', (e) => {
+      if (e.target === coffeeModal) {
+        coffeeModal.classList.add('hidden');
+      }
+    });
+  }
 };
 
 if (document.readyState === 'loading') {

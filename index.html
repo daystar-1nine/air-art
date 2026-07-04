@@ -78,6 +78,11 @@
               </svg>
             </a>
           </div>
+          <div style="margin-top: 15px; text-align: center;">
+            <button id="coffeeBtn" class="coffee-btn">
+              ☕ Buy a Coffee
+            </button>
+          </div>
         </div>
       </div>
       </div>
@@ -120,6 +125,17 @@
   </div>
 </div>
 
+</div>
+
+<!-- Coffee Modal -->
+<div id="coffeeModal" class="modal-overlay hidden">
+  <div class="modal-content">
+    <button id="closeCoffeeBtn" class="modal-close">&times;</button>
+    <h2>Support the Developer</h2>
+    <p>Scan to pay with any UPI app</p>
+    <img src="/qr.jpg" alt="UPI QR Code" class="qr-code-img" />
+    <p class="upi-id">UPI ID: des19062005@okicici</p>
+  </div>
 </div>
 
 <script type="module" src="/src/landing.ts"></script>
