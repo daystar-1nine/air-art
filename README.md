@@ -15,7 +15,7 @@ The app supports:
 - 🔗 **Clickable logo** that returns to the landing page.
 
 ## Live demo
-[https://your‑deployment‑url.com](#) *(replace with your actual URL when deployed)*
+[https://air-art-eta.vercel.app/index.html](https://air-art-eta.vercel.app/index.html)
 
 ## Getting started
 
