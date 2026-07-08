@@ -1,61 +1,107 @@
-# AirArt 🎨
+<div align="center">
+  <img src="https://raw.githubusercontent.com/daystar-1nine/air-art/main/public/logo.png" alt="AirArt Logo" width="150"/>
+  <h1>AirArt 🎨✨</h1>
+  <p><strong>Paint the Air. Unleash your Creativity.</strong></p>
+  <p>A cutting-edge, browser-based suite of interactive applications powered by <b>MediaPipe Hands</b>. No mouse, no keyboard—just your bare hands.</p>
+  
+  [![Vercel Deployment](https://img.shields.io/badge/Deployed_on-Vercel-black?logo=vercel)](https://air-art-eta.vercel.app/)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)](#)
+  [![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)](#)
+</div>
 
-A modern, premium‑looking web‑based drawing app powered by **MediaPipe Hands** for air‑gesture drawing.  
-The app supports:
+<br>
 
-- ✍️ **Air drawing** with smooth brush strokes via hand tracking.
-- 🧽 **Eraser** (pinky finger toggle).
-- 🎨 **Dynamic colour palette** and custom colour picker.
-- 🎚️ **Brush size** and multiple brush types (solid, neon glow, spray, calligraphy).
-- 📁 **Reference image overlay** for tracing.
-- 💾 **Save** artwork as PNG.
-- 📱 **Responsive UI** with a landing page and a full‑screen drawing canvas.
-- 🎯 **Zoom & pan** that correctly maps coordinates (fixed transform‑origin bug).
-- 👤 **Contributor cards** with personal photos.
-- 🔗 **Clickable logo** that returns to the landing page.
+## 🚀 Experience the Magic
 
-## Live demo
-[https://air-art-eta.vercel.app/index.html](https://air-art-eta.vercel.app/index.html)
+Try the live demo right in your browser (Works best in **Google Chrome**):  
+👉 **[Play Live on Vercel](https://air-art-eta.vercel.app/)**
 
-## Getting started
+---
+
+## 🌟 Key Features & Applications
+
+AirArt isn't just a drawing tool—it's a collection of magical, touchless web experiences!
+
+### ✍️ 1. Air Drawing Studio
+Our flagship application. Draw directly in the air!
+- **Index Finger Tracking:** Use your index finger as a digital brush.
+- **Pinky Eraser Toggle:** Raise your pinky to instantly switch to the eraser.
+- **Advanced Brushes:** Includes Solid, Neon Glow, Spray Paint, and Calligraphy.
+- **Dynamic Color Palettes:** Real-time color picking and vibrant UI overlays.
+- **Export Artwork:** Save your masterpiece instantly as a high-quality `.png`.
+
+### 🧩 2. Interactive Picture Puzzle
+A completely touchless drag-and-drop puzzle game.
+- **Webcam Integration:** Captures a snapshot of your face to use as the puzzle image!
+- **Pinch to Grab:** Seamless drag-and-drop mechanism using pinch gestures.
+- **Timer & Auto-solve:** Beat the clock or watch the puzzle solve itself!
+
+### 🕹️ 3. Games & Utilities
+- **Rock-Paper-Scissors:** Challenge an AI opponent using real-life hand gestures!
+- **Air Tic-Tac-Toe:** Play a classic game of tic-tac-toe by air-clicking the tiles.
+- **Air Calculator:** Punch in numbers from a distance like a sci-fi interface.
+
+---
+
+## 🛠️ Technology Stack
+
+- **Frontend Build Tool:** [Vite](https://vitejs.dev/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Computer Vision:** [MediaPipe Hands](https://google.github.io/mediapipe/solutions/hands.html)
+- **Styling:** Custom CSS with Glassmorphism aesthetics
+
+---
+
+## 💻 Running Locally
+
+To run the project on your own machine, follow these steps:
 
 ```bash
-# Clone the repo
+# 1. Clone the repository
 git clone https://github.com/daystar-1nine/air-art.git
 cd air-art
 
-# Install dependencies (Vite + TypeScript)
+# 2. Install dependencies
 npm install
 
-# Run locally
+# 3. Start the development server
 npm run dev
 ```
 
-Open `http://localhost:5173` in Chrome (the app works best in Chrome due to MediaPipe).  
-Allow camera permissions when prompted.
+Open `http://localhost:5173` in your browser. 
+> **Note:** Camera permissions are required for the hand-tracking engine to initialize.
 
-## Project structure
-```
+---
+
+## 📂 Project Architecture
+
+```text
 src/
- ├─ core/                # Core logic – HandTracker, CanvasRenderer, UIManager, ColorBends
- ├─ styles/              # CSS for landing, app, and canvas layout
- ├─ landing.ts           # Background animation for landing page
- ├─ main.ts              # App entry point – camera init, UI wiring
- └─ index.html / app.html # Landing and drawing pages
-public/
- ├─ suraj.jpg            # Suraj's profile picture
- └─ shubhra.jpg          # Shubhra's profile picture
+ ├─ apps/                # Individual interactive modules (Drawing, Puzzle, TicTacToe, etc.)
+ ├─ core/                # Core AI Engine (HandTrackingEngine, UIManager, BaseApp)
+ ├─ styles/              # Global aesthetic system (Glassmorphism, animations)
+ ├─ landing.ts           # Interactivity for the hero landing page
+ ├─ main.ts              # System router and app registry
+ └─ app.html             # Main application viewport
+public/                  # Static assets (Logos, Team profile pictures, etc.)
 ```
 
-## Key technical notes
-- **Canvas resize safety** – guards against a `0×0` size that caused a `DOMException`.
-- **Transform‑origin** set to `0 0` so CSS scaling matches the drawing math.
-- **DOM ready handling** – robust `DOMContentLoaded` checks to avoid race conditions.
-- **Unused variables** removed to keep the TypeScript build clean.
+---
 
-## Contributing
-Feel free to open issues or submit PRs.  
-All contributions should follow the existing code style and include appropriate tests where possible.
+## 👨‍💻 Meet the Developers
 
-## License
-MIT © 2026 AirArt contributors
+This project is proudly built and maintained by our incredible team:
+
+- **[Suraj](https://github.com/daystar-1nine)**
+- **[Shubhra](https://github.com/shubhrashinde)**
+- **[Shrawani](https://github.com/shrawani3007)**
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License. Feel free to use, modify, and distribute it!
+
+<div align="center">
+  <p>Made with ❤️ by the AirArt Team</p>
+</div>
